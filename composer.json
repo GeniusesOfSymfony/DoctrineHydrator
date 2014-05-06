@@ -1,0 +1,28 @@
+{
+    "name": "gos/doctrine-hydrator",
+    "description": "Provide powerfull Hydrator to make advanced hydration",
+    "keywords": ["Doctrine Hydrator", "Doctrine", "Hydrator"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johann Saunier",
+            "email": "johann_27@hotmail.fr"
+        }
+    ],
+    "require":
+    {
+        "php": ">=5.3.2",
+        "doctrine/common": "~2.2"
+    },
+    "required-dev" : {
+        "doctrine/orm": ">=2.4.0-RC1",
+        "doctrine/common": ">=2.4.0-RC3",
+        "doctrine/dbal": ">=2.4.0-RC1",
+        "symfony/yaml": "2.3.1"
+    },
+    "autoload": {
+        "psr-0": { "Gos\\Component\\DoctrineHydrator\\": "" }
+    },
+    "target-dir": "Gos/Component/DoctrineHydrator"
+}
