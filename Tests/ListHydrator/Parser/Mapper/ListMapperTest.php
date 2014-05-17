@@ -1,5 +1,5 @@
 <?php
-namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Mapper;
+namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Parser\Mapper;
 
 class ListMapperTest extends AbstractListMapperTest
 {

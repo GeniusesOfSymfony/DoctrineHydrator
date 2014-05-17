@@ -25,7 +25,6 @@ class ListStrategyTest extends AbstractListStrategyTest
         $this->markTestIncomplete();
     }
 
-
     public function testIsTraversableSolution()
     {
         $this->markTestIncomplete();

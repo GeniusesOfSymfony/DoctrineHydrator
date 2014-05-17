@@ -1,5 +1,5 @@
 <?php
-namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Walker;
+namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Parser\Walker;
 
 abstract class AbstractWalkerTest extends \PHPUnit_Framework_TestCase
 {
@@ -22,4 +22,4 @@ abstract class AbstractWalkerTest extends \PHPUnit_Framework_TestCase
     {
         $this->markTestIncomplete();
     }
-} 
+}

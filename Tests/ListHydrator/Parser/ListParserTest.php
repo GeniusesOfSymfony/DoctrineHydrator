@@ -1,7 +1,5 @@
 <?php
-namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator;
-
-use Doctrine\ORM\Query;
+namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Parser;
 
 class ListParserTest extends \PHPUnit_Framework_TestCase
 {

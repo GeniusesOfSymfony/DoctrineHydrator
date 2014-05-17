@@ -1,5 +1,5 @@
 <?php
-namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Mapper;
+namespace Gos\Component\DoctrineHydrator\Tests\ListHydrator\Parser\Mapper;
 
 abstract class AbstractListMapperTest extends \PHPUnit_Framework_TestCase
 {
@@ -12,4 +12,4 @@ abstract class AbstractListMapperTest extends \PHPUnit_Framework_TestCase
     {
         $this->markTestIncomplete();
     }
-} 
+}
