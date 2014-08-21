@@ -8,21 +8,21 @@ namespace Gos\Component\DoctrineHydrator\ListHydrator\Parser;
 interface ArrayBrowserInterface
 {
     /**
-     * @param callable $p
+     * @param \Closure $p
      *
      * @return mixed
      */
     public function map(\Closure $p);
 
     /**
-     * @param callable $p
+     * @param \Closure $p
      *
      * @return mixed
      */
     public function walk(\Closure $p);
 
     /**
-     * @param callable $p
+     * @param \Closure $p
      *
      * @return mixed
      */

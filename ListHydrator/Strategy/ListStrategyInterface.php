@@ -2,7 +2,6 @@
 
 namespace Gos\Component\DoctrineHydrator\ListHydrator\Strategy;
 
-use Doctrine\DBAL\Driver\Statement;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\UnitOfWork;
 
@@ -18,7 +17,7 @@ interface ListStrategyInterface
      *
      * @return mixed
      */
-    public function find(&$PK, Array &$hints, ResultSetMapping $rsm, UnitOfWork $uow);
+    public function find(&$PK, array &$hints, ResultSetMapping $rsm, UnitOfWork $uow);
 
     /**
      * @return mixed
@@ -26,7 +25,6 @@ interface ListStrategyInterface
     public function getSolution();
 
     /**
-     * @param Statement        $stmt
      * @param ResultSetMapping $rsm
      * @param UnitOfWork       $uow
      * @param array            $hints
@@ -34,7 +32,7 @@ interface ListStrategyInterface
      *
      * @return mixed
      */
-    public function work(Statement $stmt, ResultSetMapping $rsm, UnitOfWork $uow, array &$hints, &$PK);
+    public function work(ResultSetMapping $rsm, UnitOfWork $uow, array &$hints, &$PK);
 
     /**
      * @return bool

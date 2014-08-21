@@ -20,7 +20,7 @@ class ListParser extends AbstractListParser
     public function parse($PK)
     {
         if ($this->_strategy->isTraversableSolution() && !$this->isClone()) {
-            $buffer = array();
+            $buffer = [];
 
             foreach ($PK as $element) {
                 $parser = clone $this;

@@ -63,7 +63,7 @@ abstract class AbstractListHydrator extends AbstractHydrator
     {
         $this->normalizeHints();
 
-        $this->_strategy->work($this->_stmt, $this->_rsm, $this->_uow, $this->_hints, $this->_PK);
+        $this->_strategy->work($this->_rsm, $this->_uow, $this->_hints, $this->_PK);
 
         $this->_hydrator->setStrategy($this->_strategy);
 
@@ -73,7 +73,7 @@ abstract class AbstractListHydrator extends AbstractHydrator
 
         $rows = $this->_hydrator->hydrateAll($this->_stmt, $this->_rsm, $this->_hints);
 
-        $cache = $result = array();
+        $cache = $result = [];
 
         $this->hydrateRowData($rows, $cache, $result);
 

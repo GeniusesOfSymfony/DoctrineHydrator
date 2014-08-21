@@ -27,8 +27,8 @@ class ArrayListHydrator extends AbstractListHydrator
         $listMapper = new ListMapper(Query::HYDRATE_ARRAY, $this->_hydrator);
 
         $this->_parser->setMapper($listMapper);
-        $this->_parser->registerWalker(array(
+        $this->_parser->registerWalker([
                 Query::HYDRATE_ARRAY => 'Gos\Component\DoctrineHydrator\ListHydrator\Parser\Walker\ArrayWalker',
-        ));
+        ]);
     }
 }

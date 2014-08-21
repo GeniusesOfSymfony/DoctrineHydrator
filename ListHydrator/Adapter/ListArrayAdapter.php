@@ -34,7 +34,7 @@ class ListArrayAdapter extends ArrayHydrator implements ListAdapterInterface
     {
         if (false === $this->_strategy->isPredictableSolution()) {
             if (!is_array($map)) {
-                $map = array();
+                $map = [];
             }
 
             $map[] = $data;
@@ -74,7 +74,7 @@ class ListArrayAdapter extends ArrayHydrator implements ListAdapterInterface
                 return $this->walkProcess($data, $parser);
             case ListStrategy::COMPOSITE_PREDICT_PK:
             case ListStrategy::COMPOSITE_PK:
-                $buffer = array();
+                $buffer = [];
                 foreach ($parser as $parse) {
                     $buffer[] = $this->walkProcess($data, $parse);
                 }
@@ -95,7 +95,7 @@ class ListArrayAdapter extends ArrayHydrator implements ListAdapterInterface
     public function adaptMap($map)
     {
         if (true === $this->_hints[AbstractListHydrator::HINT_UNIQUE_ASSOCIATION]) {
-            $adaptedMap = array();
+            $adaptedMap = [];
             foreach ($map as $key => $element) {
                 $adaptedMap[$key] = current($element);
             }

@@ -1,7 +1,6 @@
 <?php
 
 namespace Gos\Component\DoctrineHydrator\ListHydrator\Parser;
-use Gos\Component\DoctrineHydrator\ListHydrator\Strategy\ListStrategyInterface;
 
 /**
  * Class ListParserInterface
@@ -17,9 +16,8 @@ interface ListParserInterface extends ArrayPositionInterface, ArrayBrowserInterf
     public function parse($field);
 
     /**
-     * @param                       $field
-     * @param                       $mode
-     * @param ListStrategyInterface $strategy
+     * @param   $field
+     * @param   $mode
      *
      * @return mixed
      */

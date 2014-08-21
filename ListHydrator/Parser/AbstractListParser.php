@@ -15,7 +15,7 @@ use Gos\Component\DoctrineHydrator\ListHydrator\Strategy\ListStrategyInterface;
 abstract class AbstractListParser implements ListParserInterface
 {
     protected $position = 0;
-    protected $element = array();
+    protected $element = [];
     protected $_mode;
     protected $_cloned = false;
     protected $_walkers;
@@ -204,7 +204,7 @@ abstract class AbstractListParser implements ListParserInterface
 
     public function clear()
     {
-        $this->element = array();
+        $this->element = [];
         $this->position = 0;
     }
 

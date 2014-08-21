@@ -23,9 +23,9 @@ class ObjectListHydrator extends AbstractListHydrator
         $this->_strategy = new ListStrategy();
         $parser = new ListParser();
         $listMapper = new ListMapper(Query::HYDRATE_OBJECT, $this->_hydrator);
-        $parser->registerWalker(array(
+        $parser->registerWalker([
             Query::HYDRATE_OBJECT => 'Gos\Component\DoctrineHydrator\ListHydrator\Parser\Walker\ObjectWalker'
-        ));
+        ]);
         $parser->setMapper($listMapper);
         $this->_parser = $parser;
         parent::__construct($em, Query::HYDRATE_OBJECT);

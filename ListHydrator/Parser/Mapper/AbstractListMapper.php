@@ -28,12 +28,12 @@ abstract class AbstractListMapper implements ListMapperInterface
     /**
      * @var array
      */
-    protected $_map = array();
+    protected $_map = [];
 
     /**
      * @var array
      */
-    public $keys = array();
+    public $keys = [];
 
     /**
      * @param $mode

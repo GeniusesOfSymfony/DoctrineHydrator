@@ -77,7 +77,7 @@ class ListObjectAdapter extends ObjectHydrator implements ListAdapterInterface
                 return $this->walkProcess($data, $parser);
             case ListStrategy::COMPOSITE_PREDICT_PK:
             case ListStrategy::COMPOSITE_PK:
-                $buffer = array();
+                $buffer = [];
                 foreach ($parser as $parse) {
                     $buffer[] = $this->walkProcess($data, $parse);
                 }
@@ -96,7 +96,7 @@ class ListObjectAdapter extends ObjectHydrator implements ListAdapterInterface
      */
     public function adaptMap($map)
     {
-        $adaptedMap = array();
+        $adaptedMap = [];
 
         foreach ($map as $key => $elements) {
             if (true === $this->_hints[AbstractListHydrator::HINT_UNIQUE_ASSOCIATION]) {

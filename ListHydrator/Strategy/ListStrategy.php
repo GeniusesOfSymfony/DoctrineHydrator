@@ -2,7 +2,6 @@
 
 namespace Gos\Component\DoctrineHydrator\ListHydrator\Strategy;
 
-use Doctrine\DBAL\Driver\Statement;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\UnitOfWork;
 use Gos\Component\DoctrineHydrator\ListHydrator\AbstractListHydrator;
@@ -29,7 +28,7 @@ class ListStrategy extends AbstractListStrategy
      * @param       $PK
      * @param array $hints
      */
-    public function find(&$PK, Array &$hints, ResultSetMapping $rsm, UnitOfWork $uow)
+    public function find(&$PK, array &$hints, ResultSetMapping $rsm, UnitOfWork $uow)
     {
 
         if (isset($hints[AbstractListHydrator::HINT_LIST_FIELD])) {
@@ -107,7 +106,6 @@ class ListStrategy extends AbstractListStrategy
     }
 
     /**
-     * @param Statement        $stmt
      * @param ResultSetMapping $rsm
      * @param UnitOfWork       $uow
      * @param array            $hints
@@ -116,7 +114,7 @@ class ListStrategy extends AbstractListStrategy
      * @return mixed|void
      * @throws \Exception
      */
-    public function work(Statement $stmt, ResultSetMapping $rsm, UnitOfWork $uow, array &$hints, &$PK)
+    public function work(ResultSetMapping $rsm, UnitOfWork $uow, array &$hints, &$PK)
     {
         if (null === $this->getSolution() && null === $this->find($PK, $hints, $rsm, $uow)) {
             throw new \Exception('Unable to find a strategy to process');
@@ -140,14 +138,14 @@ class ListStrategy extends AbstractListStrategy
      */
     public function isTraversableSolution()
     {
-        $traversableSolution = array(self::COMPOSITE_PREDICT_PK, self::COMPOSITE_PK);
+        $traversableSolution = [self::COMPOSITE_PREDICT_PK, self::COMPOSITE_PK];
 
         return in_array($this->getSolution(), $traversableSolution);
     }
 
     public function isPredictableSolution()
     {
-        $predictableSolution = array(self::COMPOSITE_PREDICT_PK, self::PREDICT_PK);
+        $predictableSolution = [self::COMPOSITE_PREDICT_PK, self::PREDICT_PK];
 
         return in_array($this->getSolution(), $predictableSolution);
     }

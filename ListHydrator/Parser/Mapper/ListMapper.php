@@ -2,7 +2,6 @@
 namespace Gos\Component\DoctrineHydrator\ListHydrator\Parser\Mapper;
 
 use Gos\Component\DoctrineHydrator\ListHydrator\AbstractListHydrator;
-use Gos\Component\DoctrineHydrator\ListHydrator\Adapter\ListAdapterInterface;
 use Gos\Component\DoctrineHydrator\ListHydrator\Strategy\ListStrategy;
 
 /**
@@ -12,10 +11,9 @@ use Gos\Component\DoctrineHydrator\ListHydrator\Strategy\ListStrategy;
 class ListMapper extends AbstractListMapper
 {
     /**
-     * @param                      $reference
-     * @param                      $key
-     * @param                      $data
-     * @param ListAdapterInterface $adapter
+     * @param   $reference
+     * @param   $key
+     * @param   $data
      *
      * @throws \Gos\Component\DoctrineHydrator\ListHydrator\Exception\BadMethodCallException
      * @throws \Exception
@@ -34,7 +32,7 @@ class ListMapper extends AbstractListMapper
     /**
      * @param          $key
      * @param          $data
-     * @param callable $compositeBehavior
+     * @param \Closure $compositeBehavior
      */
     protected function handle($key, $data, \Closure $compositeBehavior = null)
     {
@@ -47,7 +45,7 @@ class ListMapper extends AbstractListMapper
         } else {
             foreach ($key as $depth => $element) {
                 if (!isset($map[$element])) {
-                    $map[$element] = array();
+                    $map[$element] = [];
                 }
 
                 $map =& $map[$element];
@@ -61,7 +59,7 @@ class ListMapper extends AbstractListMapper
 
     /**
      * @param $key
-     * @param $compositeBehavior
+     * @param null|\Closure $compositeBehavior
      *
      * @return string
      * @throws \Exception
