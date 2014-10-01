@@ -24,10 +24,10 @@
     "autoload": {
         "psr-0": { "Gos\\Component\\DoctrineHydrator\\": "" }
     },
-    "target-dir": "Gos/Component/DoctrineHydrator",
     "extra": {
-    "branch-alias": {
-        "dev-master": "1.0.x-dev"
-    },
-    "target-dir": "Gos/Component/DoctrineHydrator"
+        "target-dir": "Gos/Component/DoctrineHydrator",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
