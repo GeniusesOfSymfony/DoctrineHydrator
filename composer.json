@@ -22,10 +22,9 @@
         "symfony/yaml": "~2.2"
     },
     "autoload": {
-        "psr-0": { "Gos\\Component\\DoctrineHydrator\\": "" }
+        "psr-4": { "Gos\\Component\\DoctrineHydrator\\": "" }
     },
     "extra": {
-        "target-dir": "Gos/Component/DoctrineHydrator",
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
