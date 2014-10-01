@@ -25,7 +25,7 @@
         "psr-4": { "Gos\\Component\\DoctrineHydrator\\": "" }
     },
     "autoload-dev": {
-        "psr-4": { "Gos\\Component\\DoctrineHydrator\\Tests": "/Tests" }
+        "psr-4": { "Gos\\Component\\DoctrineHydrator\\Tests\\": "/Tests" }
     },
     "extra": {
         "branch-alias": {
