@@ -100,6 +100,9 @@ abstract class AbstractListHydrator extends AbstractHydrator
      * @param array $result
      *
      * @return array|void
+     *
+     * @TODO this method has a different signature in doctrine/orm 2.5
+     * @see https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/Internal/Hydration/AbstractHydrator.php#L227
      */
     protected function hydrateRowData(array $rows, array &$cache, array &$result)
     {
